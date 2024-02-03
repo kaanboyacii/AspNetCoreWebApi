@@ -7,7 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers()
     .AddNewtonsoftJson();
-
+//deneme
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
