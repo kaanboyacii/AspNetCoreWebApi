@@ -18,8 +18,9 @@ namespace Repositories.EFCore
         public void CreateOneBook(Book book) => Create(book);
         public void DeleteOneBook(Book book) => Delete(book);
 
-        public IQueryable<Book> GetAllBookById(int id, bool trankChanges) =>
-            FindByCondition(b => b.Id.Equals(id), trankChanges);
+        public Book GetOneBookById(int id, bool trankChanges) =>
+            FindByCondition(b => b.Id.Equals(id), trankChanges)
+            .SingleOrDefault();
 
         public IQueryable<Book> GetAllBooks(bool trankChanges) =>
             FindAll(trankChanges)
