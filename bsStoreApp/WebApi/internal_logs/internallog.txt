@@ -1,0 +1,8 @@
+2024-02-06 11:24:26.9612 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-02-06 11:24:27.0020 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-02-06 11:24:27.0288 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\Kaan.Boyaci\OneDrive - Logo\Desktop\AspNetCoreWebApi\AspNetCoreWebApi\bsStoreApp\WebApi\nlog.config
+2024-02-06 11:24:27.0498 Info Configuration initialized.
+2024-02-06 11:25:57.6600 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-02-06 11:25:57.6805 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-02-06 11:25:57.6921 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\Kaan.Boyaci\OneDrive - Logo\Desktop\AspNetCoreWebApi\AspNetCoreWebApi\bsStoreApp\WebApi\nlog.config
+2024-02-06 11:25:57.6921 Info Configuration initialized.
