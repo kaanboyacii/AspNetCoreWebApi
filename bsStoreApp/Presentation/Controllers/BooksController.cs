@@ -42,6 +42,9 @@ namespace Presentation.Controllers
         {
             if (bookDto == null)
                 return BadRequest(); //400
+            if(!ModelState.IsValid)
+                return UnprocessableEntity(ModelState);
+
             var book = _manager.BookService.CreateOneBook(bookDto);
             return StatusCode(201, book); //CreatedAtRoute() ile location bilgisi koyabiliriz
         }
