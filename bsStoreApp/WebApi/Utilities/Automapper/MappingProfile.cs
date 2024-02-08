@@ -9,6 +9,7 @@ namespace WebApi.Utilities.Automapper
         public MappingProfile() 
         {
             CreateMap<BookDtoForUpdate, Book>();
+            CreateMap<Book, BookDto>();
         }
     }
 }
