@@ -24,13 +24,14 @@ namespace Repositories.EFCore
             await FindByCondition(b => b.Id.Equals(id), trankChanges)
             .SingleOrDefaultAsync();
 
-        public async Task<IEnumerable<Book>> GetAllBooksAsync(BookParameters bookParameters ,bool trankChanges) =>
-            await FindAll(trankChanges)
+        public async Task<PagedList<Book>> GetAllBooksAsync(BookParameters bookParameters ,bool trankChanges)
+        {
+            var books = await FindAll(trankChanges)
             .OrderBy(b => b.Id)
-            .Skip((bookParameters.PageNumber-1)*bookParameters.PageSize)
-            .Take(bookParameters.PageSize)
             .ToListAsync();
-
+            return PagedList<Book>
+                .ToPagedList(books,bookParameters.PageNumber,bookParameters.PageSize);
+        }
         public void UpdateOneBook(Book book) => Update(book);
 }
 }
