@@ -1,4 +1,5 @@
 ﻿using Entities.Models;
+using Entities.RequestFeature;
 using Microsoft.EntityFrameworkCore;
 using Repositories.Contracts;
 using System;
@@ -23,9 +24,11 @@ namespace Repositories.EFCore
             await FindByCondition(b => b.Id.Equals(id), trankChanges)
             .SingleOrDefaultAsync();
 
-        public async Task<IEnumerable<Book>> GetAllBooksAsync(bool trankChanges) =>
+        public async Task<IEnumerable<Book>> GetAllBooksAsync(BookParameters bookParameters ,bool trankChanges) =>
             await FindAll(trankChanges)
             .OrderBy(b => b.Id)
+            .Skip((bookParameters.PageNumber-1)*bookParameters.PageSize)
+            .Take(bookParameters.PageSize)
             .ToListAsync();
 
         public void UpdateOneBook(Book book) => Update(book);
